@@ -27,7 +27,7 @@ body {
   font-family: var(--font-cormorant), serif;
 }
 
-/* Custom typography classes based on design specs */
+/* ===== FONT FAMILIES ===== */
 .font-anton {
   font-family: var(--font-anton), sans-serif;
 }
@@ -36,7 +36,7 @@ body {
   font-family: var(--font-cormorant), serif;
 }
 
-/* Text styles from design */
+/* ===== TYPOGRAPHY ===== */
 .text-h1 {
   font-family: var(--font-anton), sans-serif;
   font-size: 80px;
@@ -65,20 +65,6 @@ body {
   font-weight: 400;
 }
 
-.text-body {
-  font-family: var(--font-cormorant), serif;
-  font-size: 20px;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-.text-body-2 {
-  font-family: var(--font-cormorant), serif;
-  font-size: 20px;
-  line-height: 140%;
-  font-weight: 400;
-}
-
 .text-h5 {
   font-family: var(--font-anton), sans-serif;
   font-size: 18px;
@@ -93,20 +79,74 @@ body {
   font-weight: 400;
 }
 
-/* Responsive typography */
+.text-body {
+  font-family: var(--font-cormorant), serif;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.text-body-2 {
+  font-family: var(--font-cormorant), serif;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+/* ===== LAYOUT UTILITIES ===== */
+.section-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.stagger-1 {
+  margin-right: 0.5rem;
+}
+
+.stagger-2 {
+  margin-right: 1rem;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .stagger-1 {
+    margin-right: 1rem;
+  }
+
+  .stagger-2 {
+    margin-right: 2rem;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+/* Mobile typography adjustments */
 @media (max-width: 768px) {
   .text-h1 {
     font-size: 60px;
   }
-  
+
   .text-h2 {
     font-size: 32px;
   }
-  
+
   .text-h3 {
     font-size: 28px;
   }
-  
+
   .text-body {
     font-size: 18px;
   }
@@ -116,15 +156,15 @@ body {
   .text-h1 {
     font-size: 48px;
   }
-  
+
   .text-h2 {
     font-size: 28px;
   }
-  
+
   .text-h3 {
     font-size: 24px;
   }
-  
+
   .text-body {
     font-size: 16px;
   }
