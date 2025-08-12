@@ -6,9 +6,7 @@ function HeroSection(): ReactElement {
   return (
     <section className="h-screen flex flex-col justify-between max-w-screen-lg mx-auto">
       {/* Welcome - Top Left */}
-      <div className="pt-8 md:pt-12 lg:pt-16">
-        <h2 className="text-h2">Welcome,</h2>
-      </div>
+      <h2 className="text-h2">Welcome,</h2>
 
       {/* Main Content - Center */}
       <div className="flex-1 flex flex-col justify-center items-center text-center px-4">
