@@ -20,16 +20,22 @@ interface TypographyGalleryProps {
 function WorkShowcase({
   work,
   index,
+  imageOnRight = true,
 }: {
   work: Work;
   index: number;
+  imageOnRight?: boolean;
 }): ReactElement {
   const [imageError, setImageError] = useState(false);
 
   return (
     <div className="group relative min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row items-center overflow-hidden">
-      {/* Left Side - Typography */}
-      <div className="flex-1 flex flex-col justify-center px-6 md:px-8 lg:px-12 xl:px-16 py-8 md:py-0 order-2 md:order-1">
+      {/* Typography Section */}
+      <div
+        className={`flex-1 flex flex-col justify-center px-6 md:px-8 lg:px-12 xl:px-16 py-8 md:py-0 ${
+          imageOnRight ? "order-2 md:order-1" : "order-2 md:order-2"
+        }`}
+      >
         {/* Project Number */}
         <div className="mb-4 md:mb-8 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
           <span className="text-h2 md:text-h1 font-anton text-black/30">
@@ -60,8 +66,12 @@ function WorkShowcase({
         </div>
       </div>
 
-      {/* Right Side - Image */}
-      <div className="flex-1 relative w-full md:w-auto h-[40vh] md:h-full min-h-[40vh] md:min-h-[70vh] order-1 md:order-2">
+      {/* Image Section */}
+      <div
+        className={`flex-1 relative w-full md:w-auto h-[40vh] md:h-full min-h-[40vh] md:min-h-[70vh] ${
+          imageOnRight ? "order-1 md:order-2" : "order-1 md:order-1"
+        }`}
+      >
         {!imageError && work.imageUrl ? (
           <Image
             src={work.imageUrl}
@@ -89,20 +99,25 @@ export default function TypographyGallery({
   works,
 }: TypographyGalleryProps): ReactElement {
   return (
-    <section className="py-16 md:py-24">
+    <section>
       {/* Gallery Header */}
       <div className="mb-12 md:mb-16 lg:mb-20 text-center px-4">
-        <h2 className="text-h2 md:text-h2 mb-4 md:mb-6">Selected Works</h2>
+        <h2 className="text-h2 md:text-h2 mb-4 md:mb-6">Proof of life</h2>
         <p className="text-body text-gray-600 max-w-2xl mx-auto">
-          Each project is a chapter in my creative journey. Typography meets
-          imagery in perfect harmony.
+          My best work. Or at least my least embarrassing. If I disappear
+          tomorrow, show them this section.
         </p>
       </div>
 
       {/* Split Layout Gallery */}
       <div className="space-y-12 md:space-y-16 lg:space-y-24">
         {works.map((work, index) => (
-          <WorkShowcase key={work.id} work={work} index={index} />
+          <WorkShowcase
+            key={work.id}
+            work={work}
+            index={index}
+            imageOnRight={index % 2 === 0} // Alternate layout: even indices have image on right, odd on left
+          />
         ))}
       </div>
 

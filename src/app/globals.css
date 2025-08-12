@@ -95,8 +95,10 @@ body {
 
 /* ===== LAYOUT UTILITIES ===== */
 section {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .stagger-1 {
@@ -111,7 +113,9 @@ section {
 
 /* Tablet and up */
 @media (min-width: 768px) {
-  .section-padding {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -122,14 +126,6 @@ section {
 
   .stagger-2 {
     margin-right: 2rem;
-  }
-}
-
-/* Desktop and up */
-@media (min-width: 1024px) {
-  .section-padding {
-    padding-left: 6rem;
-    padding-right: 6rem;
   }
 }
 

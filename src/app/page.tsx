@@ -6,9 +6,7 @@ function HeroSection(): ReactElement {
   return (
     <section className="h-screen flex flex-col justify-between">
       {/* Welcome - Top Left */}
-      <div className="pt-8 md:pt-12 lg:pt-16">
-        <h2 className="text-h2">Welcome,</h2>
-      </div>
+      <h2 className="text-h2">Welcome,</h2>
 
       {/* Main Content - Center */}
       <div className="flex-1 flex flex-col justify-center items-center text-center px-4">
@@ -21,7 +19,7 @@ function HeroSection(): ReactElement {
       </div>
 
       {/* Staggered List - Bottom Right */}
-      <div className="flex justify-end pb-8 md:pb-12 lg:pb-16">
+      <div className="flex justify-end">
         <div className="flex flex-col items-end space-y-1 md:space-y-2 lg:space-y-3">
           <p className="text-h3">I code</p>
           <p className="text-h3 stagger-1">I write</p>
@@ -48,7 +46,7 @@ export default function Home(): ReactElement {
   return (
     <div className="bg-white text-black">
       <HeroSection />
-      <ProofOfLifeSection />
+      {/* <ProofOfLifeSection /> */}
       <TypographyGallery works={featuredWorks} />
     </div>
   );
