@@ -4,9 +4,11 @@ import { featuredWorks } from "@/data/works";
 
 function HeroSection(): ReactElement {
   return (
-    <section className="h-screen flex flex-col justify-between">
+    <section className="h-screen flex flex-col justify-between max-w-screen-lg mx-auto">
       {/* Welcome - Top Left */}
-      <h2 className="text-h2">Welcome,</h2>
+      <div className="pt-8 md:pt-12 lg:pt-16">
+        <h2 className="text-h2">Welcome,</h2>
+      </div>
 
       {/* Main Content - Center */}
       <div className="flex-1 flex flex-col justify-center items-center text-center px-4">
@@ -30,23 +32,11 @@ function HeroSection(): ReactElement {
   );
 }
 
-function ProofOfLifeSection(): ReactElement {
-  return (
-    <section className="flex flex-col justify-center">
-      <h2 className="text-h3 mb-4 md:mb-6">Proof of life</h2>
-      <p className="text-body max-w-3xl">
-        My best work. Or at least my least embarrassing. If I disappear
-        tomorrow, show them this section.
-      </p>
-    </section>
-  );
-}
 
 export default function Home(): ReactElement {
   return (
     <div className="bg-white text-black">
       <HeroSection />
-      {/* <ProofOfLifeSection /> */}
       <TypographyGallery works={featuredWorks} />
     </div>
   );
