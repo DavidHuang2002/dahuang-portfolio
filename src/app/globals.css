@@ -1,39 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-anton: var(--font-anton);
-  --font-cormorant: var(--font-cormorant);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-anton: var(--font-anton);
-  --font-cormorant: var(--font-cormorant);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-cormorant), serif;
 }
 
-/* ===== FONT FAMILIES ===== */
-.font-anton {
+/* ===== FONT SYSTEM ===== */
+:root {
+  /* Font Families - Using Next.js font variables directly */
+  --font-primary: var(--font-anton), sans-serif;
+  --font-secondary: var(--font-cormorant), serif;
+  --font-body: "Helvetica", "Arial", sans-serif;
+}
+
+/* ===== FONT UTILITY CLASSES ===== */
+.font-primary {
   font-family: var(--font-anton), sans-serif;
 }
 
-.font-cormorant {
+.font-secondary {
   font-family: var(--font-cormorant), serif;
+}
+
+.font-body {
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -80,7 +70,7 @@ body {
 }
 
 .text-body {
-  font-family: var(--font-cormorant), serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 20px;
   line-height: 1.4;
   font-weight: 400;

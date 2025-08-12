@@ -23,8 +23,8 @@ export default function NicelyProjectPage() {
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-h1 md:text-h0 font-anton mb-4">Nicely</h1>
-            <p className="text-h4 font-cormorant max-w-2xl mx-auto px-4">
+            <h1 className="text-h1 md:text-h0 mb-4">Nicely</h1>
+            <p className="text-h4 max-w-2xl mx-auto px-4">
               A therapy insights platform that transforms therapy goals into
               clear actions
             </p>
@@ -39,7 +39,7 @@ export default function NicelyProjectPage() {
             {/* Project Info */}
             <div className="md:col-span-2 space-y-8">
               <div>
-                <h2 className="text-h2 font-anton mb-6">About the Project</h2>
+                <h2 className="text-h2 mb-6">About the Project</h2>
                 <p className="text-body text-gray-700 leading-relaxed">
                   Nicely is a comprehensive therapy insights platform designed
                   to bridge the gap between therapy sessions and daily life. The
@@ -50,7 +50,7 @@ export default function NicelyProjectPage() {
               </div>
 
               <div>
-                <h3 className="text-h3 font-anton mb-4">The Challenge</h3>
+                <h3 className="text-h3 mb-4">The Challenge</h3>
                 <p className="text-body text-gray-700 leading-relaxed">
                   Many therapy clients struggle to maintain progress between
                   sessions. They often forget key insights, lose track of their
@@ -62,7 +62,7 @@ export default function NicelyProjectPage() {
               </div>
 
               <div>
-                <h3 className="text-h3 font-anton mb-4">The Solution</h3>
+                <h3 className="text-h3 mb-4">The Solution</h3>
                 <p className="text-body text-gray-700 leading-relaxed">
                   Nicely provides an intuitive interface where users can input
                   their therapy notes, which are then automatically organized
@@ -73,7 +73,7 @@ export default function NicelyProjectPage() {
               </div>
 
               <div>
-                <h3 className="text-h3 font-anton mb-4">Key Features</h3>
+                <h3 className="text-h3 mb-4">Key Features</h3>
                 <ul className="space-y-3 text-body text-gray-700">
                   <li className="flex items-start space-x-3">
                     <span className="text-blue-600 font-bold">•</span>
@@ -101,7 +101,7 @@ export default function NicelyProjectPage() {
               </div>
 
               <div>
-                <h3 className="text-h3 font-anton mb-4">Outcomes & Impact</h3>
+                <h3 className="text-h3 mb-4">Outcomes & Impact</h3>
                 <p className="text-body text-gray-700 leading-relaxed">
                   The platform has helped users maintain better consistency in
                   their therapeutic work, leading to improved outcomes and more
@@ -115,39 +115,37 @@ export default function NicelyProjectPage() {
             {/* Project Meta */}
             <div className="space-y-8">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-h4 font-anton mb-4">Project Details</h3>
+                <h3 className="text-h4 mb-4">Project Details</h3>
                 <div className="space-y-3">
                   <div>
                     <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
                       Category
                     </span>
-                    <p className="text-body font-cormorant">Web Design</p>
+                    <p className="text-body-2">Web Design</p>
                   </div>
                   <div>
                     <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
                       Year
                     </span>
-                    <p className="text-body font-cormorant">2024</p>
+                    <p className="text-body-2">2024</p>
                   </div>
                   <div>
                     <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
                       Role
                     </span>
-                    <p className="text-body font-cormorant">
-                      Lead Designer & Developer
-                    </p>
+                    <p className="text-body-2">Lead Designer & Developer</p>
                   </div>
                   <div>
                     <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
                       Duration
                     </span>
-                    <p className="text-body font-cormorant">6 months</p>
+                    <p className="text-body-2">6 months</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-h4 font-anton mb-4">Technologies</h3>
+                <h3 className="text-h4 mb-4">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-white text-sm font-medium text-gray-700 rounded-full border">
                     React
@@ -171,7 +169,7 @@ export default function NicelyProjectPage() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-h4 font-anton mb-4">Tools & Methods</h3>
+                <h3 className="text-h4 mb-4">Tools & Methods</h3>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 bg-white text-sm font-medium text-gray-700 rounded-full border">
                     Figma
@@ -197,7 +195,7 @@ export default function NicelyProjectPage() {
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <Link
             href="/"
-            className="inline-flex items-center space-x-2 text-h5 font-anton text-black hover:text-gray-600 transition-colors duration-300 group"
+            className="inline-flex items-center space-x-2 text-h5 text-black hover:text-gray-600 transition-colors duration-300 group"
           >
             <svg
               className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300"

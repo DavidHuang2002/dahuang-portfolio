@@ -30,7 +30,6 @@ function HeroSection(): ReactElement {
   );
 }
 
-
 export default function Home(): ReactElement {
   return (
     <div className="bg-white text-black">

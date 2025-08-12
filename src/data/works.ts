@@ -17,24 +17,24 @@ export const featuredWorks: Work[] = [
     imageUrl: "/nicely-landing.png",
     category: "Web Design",
     year: "2024",
-    link: "/projects/nicely",
+    link: "https://nicely.vercel.app/",
   },
   {
     id: "2",
-    title: "Urban Perspectives",
+    title: "Bookem Volunteer Portal",
     description:
       "A photography series capturing the geometric patterns and hidden beauty within urban architecture and street scenes.",
-    imageUrl: "/nicely-landing.png", // Placeholder - replace with actual image
+    imageUrl: "/bookem-intro.png", 
     category: "Photography",
     year: "2023",
-    link: "/projects/urban-perspectives",
+    link: "https://bookem-user.vercel.app/",
   },
   {
     id: "3",
-    title: "Code Poetry",
+    title: "NASA Lunabotics",
     description:
       "An experimental coding project that transforms algorithms into visual art, exploring the aesthetic potential of programming languages.",
-    imageUrl: "/nicely-landing.png", // Placeholder - replace with actual image
+    imageUrl: "/robotics-robot.png",
     category: "Creative Code",
     year: "2024",
     link: "/projects/code-poetry",

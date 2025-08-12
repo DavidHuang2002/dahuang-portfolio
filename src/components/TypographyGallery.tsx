@@ -54,17 +54,15 @@ function WorkShowcase({
 
         {/* Category and Year */}
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-8 mb-6 md:mb-8 opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-          <span className="text-h6 md:text-h5 font-anton uppercase tracking-widest text-black/60">
+          <span className="text-h6 md:text-h5 uppercase tracking-widest text-black/60">
             {work.category}
           </span>
-          <span className="text-h6 md:text-h5 font-cormorant text-black/60">
-            {work.year}
-          </span>
+          <span className="text-h6 md:text-h5 text-black/60">{work.year}</span>
         </div>
 
         {/* Description */}
         <div className="max-w-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-          <p className="text-body text-black/70 font-cormorant leading-relaxed">
+          <p className="text-body text-black/70 leading-relaxed">
             {work.description}
           </p>
         </div>
@@ -86,9 +84,7 @@ function WorkShowcase({
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-            <span className="text-white/50 font-anton text-h3">
-              Image Loading...
-            </span>
+            <span className="text-white/50 text-h3">Image Loading...</span>
           </div>
         )}
 
@@ -149,7 +145,7 @@ export default function TypographyGallery({
       <div className="mt-20 text-center">
         <a
           href="/works"
-          className="inline-flex items-center space-x-3 text-h5 font-anton text-black hover:text-gray-600 transition-colors duration-300 group"
+          className="inline-flex items-center space-x-3 text-h5 text-black hover:text-gray-600 transition-colors duration-300 group"
         >
           <span>Explore All Works</span>
           <svg
