@@ -1,5 +1,7 @@
 import type { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { isExternalLink } from "@/data/works";
 
 interface Work {
   id: string;
@@ -8,6 +10,7 @@ interface Work {
   imageUrl: string;
   category: string;
   year: string;
+  link: string;
 }
 
 interface WorkGalleryProps {
@@ -15,7 +18,10 @@ interface WorkGalleryProps {
 }
 
 function WorkFrame({ work }: { work: Work }): ReactElement {
-  return (
+  // Determine if the link is external (starts with http) or internal
+  const isExternal = isExternalLink(work.link);
+
+  const WorkContent = () => (
     <div className="group relative">
       {/* Floating Frame Container */}
       <div className="relative bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-500 ease-out transform hover:-translate-y-1">
@@ -52,6 +58,26 @@ function WorkFrame({ work }: { work: Work }): ReactElement {
         </div>
       </div>
     </div>
+  );
+
+  // Render as Link for internal routes, or as anchor for external URLs
+  if (isExternal) {
+    return (
+      <a
+        href={work.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block cursor-pointer"
+      >
+        <WorkContent />
+      </a>
+    );
+  }
+
+  return (
+    <Link href={work.link} className="block cursor-pointer">
+      <WorkContent />
+    </Link>
   );
 }
 

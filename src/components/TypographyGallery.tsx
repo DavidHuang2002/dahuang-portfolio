@@ -2,7 +2,9 @@
 
 import type { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { isExternalLink } from "@/data/works";
 
 interface Work {
   id: string;
@@ -11,6 +13,7 @@ interface Work {
   imageUrl: string;
   category: string;
   year: string;
+  link: string;
 }
 
 interface TypographyGalleryProps {
@@ -27,8 +30,9 @@ function WorkShowcase({
   imageOnRight?: boolean;
 }): ReactElement {
   const [imageError, setImageError] = useState(false);
+  const isExternal = isExternalLink(work.link);
 
-  return (
+  const WorkContent = () => (
     <div className="group relative min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row items-center overflow-hidden">
       {/* Typography Section */}
       <div
@@ -92,6 +96,26 @@ function WorkShowcase({
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
       </div>
     </div>
+  );
+
+  // Render as Link for internal routes, or as anchor for external URLs
+  if (isExternal) {
+    return (
+      <a
+        href={work.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block cursor-pointer"
+      >
+        <WorkContent />
+      </a>
+    );
+  }
+
+  return (
+    <Link href={work.link} className="block cursor-pointer">
+      <WorkContent />
+    </Link>
   );
 }
 
