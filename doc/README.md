@@ -6,7 +6,7 @@ Welcome to the documentation for David Huang's Portfolio project. This folder co
 
 ### Design & Styling
 
-- **[Font System](./font-system.md)** - Complete guide to the centralized font system, typography classes, and best practices
+- **[Font System](./font-system.md)** - Complete guide to the simplified two-font system (Anton + Helvetica)
 
 ### Development
 

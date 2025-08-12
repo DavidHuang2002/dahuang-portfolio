@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Cormorant_Garamond } from "next/font/google";
+import { Anton, Manrope } from "next/font/google";
 import "./globals.css";
 
 const anton = Anton({
@@ -8,10 +8,10 @@ const anton = Anton({
   weight: "400",
 });
 
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anton.variable} ${cormorantGaramond.variable} antialiased font-body`}
+        className={`${anton.variable} ${manrope.variable} antialiased font-body`}
       >
         {children}
       </body>

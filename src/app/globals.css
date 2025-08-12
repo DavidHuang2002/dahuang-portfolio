@@ -5,72 +5,75 @@ body {
   color: var(--foreground);
 }
 
-/* ===== FONT SYSTEM ===== */
+/* ===== SIMPLE FONT SYSTEM ===== */
 :root {
-  /* Font Families - Using Next.js font variables directly */
-  --font-primary: var(--font-anton), sans-serif;
-  --font-secondary: var(--font-cormorant), serif;
-  --font-body: "Helvetica", "Arial", sans-serif;
+  /* Easy to change fonts - just update these variables */
+  --font-primary: "Anton", "Anton Fallback", sans-serif; 
+  /*
+  --font-secondary: "Helvetica", "Arial", sans-serif; 
+  */
+
+  --font-secondary: "Manrope", "Manrope Fallback", sans-serif;
 }
 
 /* ===== FONT UTILITY CLASSES ===== */
 .font-primary {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
 }
 
 .font-secondary {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-secondary);
 }
 
 .font-body {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: var(--font-secondary);
 }
 
 /* ===== TYPOGRAPHY ===== */
 .text-h1 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 80px;
   line-height: 1.2;
   font-weight: 400;
 }
 
 .text-h2 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 40px;
   line-height: 1.2;
   font-weight: 400;
 }
 
 .text-h3 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 32px;
   line-height: 1.2;
   font-weight: 400;
 }
 
 .text-h4 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
 
 .text-h5 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 18px;
   line-height: 1.4;
   font-weight: 400;
 }
 
 .text-h6 {
-  font-family: var(--font-anton), sans-serif;
+  font-family: var(--font-primary);
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
 }
 
 .text-body {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: var(--font-secondary);
   font-size: 20px;
   line-height: 1.4;
   font-weight: 400;
@@ -78,7 +81,7 @@ body {
 }
 
 .text-body-2 {
-  font-family: var(--font-cormorant), serif;
+  font-family: var(--font-secondary);
   font-size: 20px;
   line-height: 140%;
   font-weight: 400;

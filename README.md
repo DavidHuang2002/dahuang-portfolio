@@ -36,7 +36,7 @@ For detailed technical documentation, guides, and best practices, see the [`/doc
 
 - **Framework**: Next.js 15 with App Router
 - **Styling**: Tailwind CSS with custom typography system
-- **Fonts**: Anton (headings), Cormorant Garamond (secondary), Helvetica (body)
+- **Fonts**: Anton (headings), Helvetica (body text)
 - **Language**: TypeScript
 - **Deployment**: Vercel (recommended)
 
