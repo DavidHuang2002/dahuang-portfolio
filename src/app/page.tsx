@@ -1,8 +1,10 @@
 import type { ReactElement } from "react";
+import TypographyGallery from "@/components/TypographyGallery";
+import { featuredWorks } from "@/data/works";
 
 function HeroSection(): ReactElement {
   return (
-    <section className="h-screen flex flex-col justify-between section-padding">
+    <section className="h-screen flex flex-col justify-between">
       {/* Welcome - Top Left */}
       <div className="pt-8 md:pt-12 lg:pt-16">
         <h2 className="text-h2">Welcome,</h2>
@@ -32,7 +34,7 @@ function HeroSection(): ReactElement {
 
 function ProofOfLifeSection(): ReactElement {
   return (
-    <section className="min-h-screen section-padding flex flex-col justify-center">
+    <section className="flex flex-col justify-center">
       <h2 className="text-h3 mb-4 md:mb-6">Proof of life</h2>
       <p className="text-body max-w-3xl">
         My best work. Or at least my least embarrassing. If I disappear
@@ -47,6 +49,7 @@ export default function Home(): ReactElement {
     <div className="bg-white text-black">
       <HeroSection />
       <ProofOfLifeSection />
+      <TypographyGallery works={featuredWorks} />
     </div>
   );
 }
