@@ -38,13 +38,13 @@ function WorkShowcase({
       >
         {/* Project Number */}
         <div className="mb-4 md:mb-8 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
-          <span className="text-h2 md:text-h1 font-anton text-black/30">
+          <span className="text-h2 md:text-h1 text-black/30">
             {(index + 1).toString().padStart(2, "0")}
           </span>
         </div>
 
         {/* Project Title - The Star */}
-        <h2 className="text-h1 md:text-[80px] lg:text-[100px] xl:text-[120px] font-anton leading-none mb-6 md:mb-8 group-hover:scale-105 transition-transform duration-700">
+        <h2 className="text-h1 md:text-[80px] lg:text-[100px] xl:text-[120px] mb-6 md:mb-8 group-hover:scale-105 transition-transform duration-700">
           {work.title}
         </h2>
 
@@ -101,9 +101,9 @@ export default function TypographyGallery({
   return (
     <section>
       {/* Gallery Header */}
-      <div className="mb-12 md:mb-16 lg:mb-20 text-center px-4">
-        <h2 className="text-h2 md:text-h2 mb-4 md:mb-6">Proof of life</h2>
-        <p className="text-body text-gray-600 max-w-2xl mx-auto">
+      <div className="text-center">
+        <h2 className="text-h2">Proof of life</h2>
+        <p className="text-body max-w-2xl mx-auto">
           My best work. Or at least my least embarrassing. If I disappear
           tomorrow, show them this section.
         </p>
