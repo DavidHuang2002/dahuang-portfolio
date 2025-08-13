@@ -37,7 +37,7 @@ export const featuredWorks: Work[] = [
     imageUrl: "/robotics-robot.png",
     category: "Now that's some cool shit",
     year: "2024",
-    link: "/projects/code-poetry",
+    link: "/projects/robotics",
   },
 ];
 
