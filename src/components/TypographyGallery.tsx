@@ -79,7 +79,7 @@ function WorkShowcase({
             src={work.imageUrl}
             alt={work.title}
             fill
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-1000"
+            className="object-contain object-center group-hover:scale-105 transition-transform duration-1000"
             onError={() => setImageError(true)}
           />
         ) : (
