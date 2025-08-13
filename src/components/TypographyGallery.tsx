@@ -142,7 +142,8 @@ export default function TypographyGallery({
       </div>
 
       {/* View All Works Link */}
-      <div className="mt-20 text-center">
+      {/* TODO: add the all work page and add this back in */}
+      {/* <div className="mt-20 text-center">
         <a
           href="/works"
           className="inline-flex items-center space-x-3 text-h5 text-black hover:text-gray-600 transition-colors duration-300 group"
@@ -162,7 +163,7 @@ export default function TypographyGallery({
             />
           </svg>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }
